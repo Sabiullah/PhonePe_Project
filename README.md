@@ -76,8 +76,8 @@ This project is licensed under the MIT License. Please review the LICENSE file f
 
 **Contact**
 
-📧 Email: gopiashokankiot@gmail.com 
+📧 Email: safycosting@gmail.com
 
-🌐 LinkedIn: [linkedin.com/in/gopiashokan](https://www.linkedin.com/in/gopiashokan)
+🌐 LinkedIn: https://www.linkedin.com/in/sabiullah-noor-mohamed-83507386/
 
 For any further questions or inquiries, feel free to reach out. We are happy to assist you with any queries.
