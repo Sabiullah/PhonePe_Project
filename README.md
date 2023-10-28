@@ -78,6 +78,7 @@ This project is licensed under the MIT License. Please review the LICENSE file f
 
 📧 Email: safycosting@gmail.com
 
-🌐 LinkedIn: https://www.linkedin.com/in/sabiullah-noor-mohamed-83507386/
+🌐 LinkedIn: https://www.linkedin.com/posts/sabiullah-noor-mohamed-83507386_datascience-datascience-iitmadras-activity-7123930497239420928-ig4x?utm_source=share&utm_medium=member_desktop
+
 
 For any further questions or inquiries, feel free to reach out. We are happy to assist you with any queries.
