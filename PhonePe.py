@@ -261,6 +261,12 @@ cursor.execute("SELECT * FROM agg_trans")
 rows = cursor.fetchall()
 
 if SELECT == "Home":
+    # URL to the GeoJSON file containing Indian state boundaries from Natural Earth Data
+    indian_states_geojson_url = "https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson"
+
+    # Read the GeoJSON data into a GeoDataFrame
+    gdf = gpd.read_file(indian_states_geojson_url)
+    
     col1, col2 = st.columns(2)
     col1.image(Image.open("C:\\Users\\safyc\\Desktop\\Python files\\Phonepe Data\\PhonePe.jpg"), width=300)
     with col1:
@@ -272,8 +278,20 @@ if SELECT == "Home":
 
     df = pd.DataFrame(rows, columns=['States', 'Transaction_Year', 'Quarters', 'Transaction_Type', 'Transaction_Count',
                                      'Transaction_Amount'])
-    fig = px.choropleth(df, locations="States", scope="asia", color="States", hover_name="States",
-                        title="Live Geo Visualization of India")
+    
+    # Create a choropleth map with India scope fron world map
+    #--------------------------------------------------------------
+    fig = px.choropleth(gdf,
+                        geojson=gdf.geometry,
+                        locations=gdf.index,
+                        color="ST_NM",  # Change 'States' to 'ST_NM'
+                        hover_name="ST_NM",  # Also change 'States' to 'ST_NM' for hover_name
+                        title="State-wise Visualization of India")
+
+    # Adjust the height and width of the map
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_layout(height=600, width=600)
+
     st.plotly_chart(fig)
 
 
